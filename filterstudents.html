@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fixed table</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+
+        .heading {
+            display: flex;
+            background-color: #232f3e;
+            box-shadow: 0px 1px 2px #232f3e;
+
+        }
+
+        h1 {
+            color: coral;
+            font-weight: bold;
+            text-align: center;
+            background: transparent;
+            padding: 7px;
+
+        }
+
+
+        .outer-wrapper {
+            margin-top: 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.9);
+            max-width: fit-content;
+            max-height: fit-content;
+
+
+        }
+
+        .table-wrapper {
+
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: fit-content;
+            max-height: 66.4vh;
+
+            margin-top: 22px;
+
+            margin: 15px;
+            padding-bottom: 20px;
+
+        }
+
+
+        table {
+
+            min-width: max-content;
+
+            border-collapse: separate;
+            border-spacing: 0px;
+
+        }
+
+        .table-filter {
+            border-radius: 5px;
+        }
+
+        table th {
+            position: sticky;
+            top: 0px;
+
+            background-color: #133b5c;
+            color: rgb(241, 245, 179);
+
+            text-align: center;
+            font-weight: normal;
+            font-size: 18px;
+            outline: 0.7px solid black;
+            border: 1.5px solid black;
+
+        }
+
+
+
+        table th,
+        table td {
+
+            padding: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        table td {
+            text-align: left;
+
+            font-size: 15px;
+            border: 1px solid rgb(177, 177, 177);
+            padding-left: 20px;
+
+        }
+        button{
+            background-color: #133b5c;
+            border-radius: 3px;
+            color: aliceblue;
+            margin-top: 30px;
+            height: 30px;
+            width: 60px;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Students Filter Page</h1>
+
+    </div>
+    <div class="outer-wrapper">
+        <div class="table-wrapper">
+            <table id="emp-table">
+                <thead>
+                    <th col-index=1>Student Name</th>
+                    <th col-index=2>Gender
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all"></option>
+                        </select>
+                    </th>
+
+                    <th col-index=3>Department
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all"></option>
+                        </select>
+                    </th>
+                    <th col-index=4>Student Status
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all"></option>
+                        </select>
+                    </th>
+                    <th col-index=5>Placement Status
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all"></option>
+                        </select>
+                    </th>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Charandeep Singh Parihar</td>
+                        <td>M</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+
+                    </tr>
+                    <tr>
+                        <td>Ajit Singh Parihar</td>
+                        <td>M</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Kavita Singh</td>
+                        <td>F</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Raj Singh</td>
+                        <td>M</td>
+                        <td>Civil</td>
+                        <td>Active</td>
+                        <td>Placed</td>
+                    </tr>
+                    <tr>
+                        <td>Arpan Pandey</td>
+                        <td>M</td>
+                        <td>Mechanical</td>
+                        <td>Inactive</td>
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Riya Solanki</td>
+                        <td>F</td>
+                        <td>Electronics</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Madhusudan Kumar</td>
+                        <td>M</td>
+                        <td>Civil</td>
+                        <td>Active</td>
+                        <td>Placed</td>
+                    </tr>
+                    <tr>
+                        <td>Faizal Saif</td>
+                        <td>M</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Dheeraj Agrahari</td>
+                        <td>M</td>
+                        <td>Mechanical</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Harshita Sharma</td>
+                        <td>F</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>Placed</td>
+                    </tr>
+                    <tr>
+                        <td>Dheeraj Seera</td>
+                        <td>M</td>
+                        <td>Electronics</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Biraj Regmi</td>
+                        <td>M</td>
+                        <td>Computer Science</td>
+                        <td>Inactive</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Priyanshu Shekhar</td>
+                        <td>M</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>Placed</td>
+                    </tr>
+                    <tr>
+                        <td>Arihant Kumar</td>
+                        <td>M</td>
+                        <td>Civil</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Siya saran</td>
+                        <td>F</td>
+                        <td>Mechanical</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Omveer</td>
+                        <td>M</td>
+                        <td>Electronics</td>
+                        <td>Inactive</td>
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Harsh Kumar</td>
+                        <td>M</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Nand Nandan</td>
+                        <td>M</td>
+                        <td>Aerospace</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                    <tr>
+                        <td>Sumit Thakur</td>
+                        <td>M</td>
+                        <td>Mechanical</td>
+                        <td>Active</td>
+                        <td>Placed</td>
+                    </tr>
+                    <tr>
+                        <td>Varun Sharma</td>
+                        <td>M</td>
+                        <td>Computer Science</td>
+                        <td>Active</td>
+                        <td>NotPlaced</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script>
+                window.onload = () => {
+                    console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+                };
+
+                getUniqueValuesFromColumn()
+
+                function getUniqueValuesFromColumn() {
+
+                    var unique_col_values_dict = {}
+
+                    allFilters = document.querySelectorAll(".table-filter")
+                    allFilters.forEach((filter_i) => {
+                        col_index = filter_i.parentElement.getAttribute("col-index");
+
+                        const rows = document.querySelectorAll("#emp-table > tbody > tr")
+
+                        rows.forEach((row) => {
+                            cell_value = row.querySelector("td:nth-child(" + col_index + ")").innerHTML;
+
+                            if (col_index in unique_col_values_dict) {
+
+
+                                if (unique_col_values_dict[col_index].includes(cell_value)) {
+
+
+                                } else {
+                                    unique_col_values_dict[col_index].push(cell_value)
+
+
+                                }
+
+
+                            } else {
+                                unique_col_values_dict[col_index] = new Array(cell_value)
+                            }
+                        });
+
+
+                    });
+
+
+
+                    updateSelectOptions(unique_col_values_dict)
+
+                };
+
+
+                function updateSelectOptions(unique_col_values_dict) {
+                    allFilters = document.querySelectorAll(".table-filter")
+
+                    allFilters.forEach((filter_i) => {
+                        col_index = filter_i.parentElement.getAttribute('col-index')
+
+                        unique_col_values_dict[col_index].forEach((i) => {
+                            filter_i.innerHTML = filter_i.innerHTML + `\n<option value="${i}">${i}</option>`
+                        });
+
+                    });
+                };
+
+
+                function filter_rows() {
+                    allFilters = document.querySelectorAll(".table-filter")
+                    var filter_value_dict = {}
+
+                    allFilters.forEach((filter_i) => {
+                        col_index = filter_i.parentElement.getAttribute('col-index')
+
+                        value = filter_i.value
+                        if (value != "all") {
+                            filter_value_dict[col_index] = value;
+                        }
+                    });
+
+                    var col_cell_value_dict = {};
+
+                    const rows = document.querySelectorAll("#emp-table tbody tr");
+                    rows.forEach((row) => {
+                        var display_row = true;
+
+                        allFilters.forEach((filter_i) => {
+                            col_index = filter_i.parentElement.getAttribute('col-index')
+                            col_cell_value_dict[col_index] = row.querySelector("td:nth-child(" + col_index + ")").innerHTML
+                        })
+
+                        for (var col_i in filter_value_dict) {
+                            filter_value = filter_value_dict[col_i]
+                            row_cell_value = col_cell_value_dict[col_i]
+
+                            if (row_cell_value.indexOf(filter_value) == -1 && filter_value != "all") {
+                                display_row = false;
+                                break;
+                            }
+
+
+                        }
+
+                        if (display_row == true) {
+                            row.style.display = "table-row"
+
+                        } else {
+                            row.style.display = "none"
+
+                        }
+
+
+
+
+
+                    })
+
+                }
+
+
+            </script>
+        </div>
+    </div>
+
+   <a href="placementofficer.html"><button>Back</button></a>
+</body>
+
+</html>

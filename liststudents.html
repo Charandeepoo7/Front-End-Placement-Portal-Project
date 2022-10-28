@@ -1,0 +1,215 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+     
+    th,
+    td {
+        padding: 20px;
+    }
+     
+    th {
+        text-align: left;
+    }
+    h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    input{
+        border-radius: 4px;
+        height: 30px;
+        width: 200px;
+    }
+    button{
+        margin-top: 20px;
+        margin-left: 60px;
+        border-radius: 6px;
+        height: 40px;
+        width: 80px;
+        background-color: darkblue;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover{
+        height: 55px;
+        width: 95px;
+        background-color: black;
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+ 
+<body>
+    <table style="width:100%" id="list">
+        <h1>Student List<h1>
+            <input id="gfg" type="text" placeholder="Search here">
+        <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Registration No.</th>
+            <th>Cgpa</th>
+            <th>Programme</th>
+        </tr>
+        <tbody id="geeks">
+            <tr>
+            <td>1</td>
+            <td>Charandeep Singh Parihar</td>
+            <td>12008251</td>
+            <td>8.5</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ajit Singh Parihar</td>
+            <td>12008255</td>
+            <td>8.7</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Raj Pratap Singh</td>
+            <td>12008253</td>
+            <td>8.5</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Suraj Kumar</td>
+            <td>12008259</td>
+            <td>8.9</td>
+            <td>B.Tech(Ece)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Arpan Pandey</td>
+            <td>12018253</td>
+            <td>8.2</td>
+            <td>B.Tech(Mec)</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Priyanshu Bhatt</td>
+            <td>12118253</td>
+            <td>9.5</td>
+            <td>B.Tech(Ae)</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Madhusudan Kumar</td>
+            <td>12009253</td>
+            <td>8.1</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Faizal Saif</td>
+            <td>12024253</td>
+            <td>8.6</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Dheeraj Agrahari</td>
+            <td>12008563</td>
+            <td>7.5</td>
+            <td>B.Tech(Be)</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Vamsi Reddy</td>
+            <td>12478253</td>
+            <td>9.7</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Dheeraj Seera</td>
+            <td>13008253</td>
+            <td>6.5</td>
+            <td>B.Tech(Ce)</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Biraj Regmi</td>
+            <td>12025853</td>
+            <td>7.9</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Priyanshu Shekhar</td>
+            <td>12008953</td>
+            <td>8.0</td>
+            <td>B.Tech(It)</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Arihant Kumar</td>
+            <td>13508253</td>
+            <td>5.6</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>GulabChand Kumar Gupta</td>
+            <td>12006553</td>
+            <td>4.6</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Omveer</td>
+            <td>15008253</td>
+            <td>7.0</td>
+            <td>B.Tech(Ge)</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Harsh Kumar</td>
+            <td>12057253</td>
+            <td>10.0</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Nand Nandan</td>
+            <td>12008243</td>
+            <td>9.1</td>
+            <td>B.Tech(Ae)</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Sumit Thakur</td>
+            <td>11208253</td>
+            <td>7.6</td>
+            <td>B.Tech(Cse)</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Varun Sharma</td>
+            <td>12008833</td>
+            <td>9.0</td>
+            <td>B.Tech(Metallurgy)</td>
+        </tr>
+        </tbody>
+</table>
+<script>
+$(document).ready(function() {
+    $("#gfg").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#geeks tr").filter(function() {
+            $(this).toggle($(this).text()
+            .toLowerCase().indexOf(value) > -1)
+        });
+    });
+    });
+</script>
+<a href="placementofficer.html"><button>Back</button></a>
+</body>
+</html>

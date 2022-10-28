@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Drive</title>
+    <style>
+        body{
+            background-color: rgb(181, 170, 170) ;
+        }
+        h1 {
+            text-align: center;
+            background-color: rgb(201, 193, 193);
+        }
+
+        h2 {
+            margin-left: 40px;
+            font-size: 25px;
+        }
+
+        input {
+            border-color: black;
+            border-radius: 7px;
+        }
+
+        select {
+            border-radius: 7px;
+            border-color: black;
+            height: 20px;
+            width: 180px;
+        }
+        button{
+            border-color: black;
+            background-color: orangered;
+            height: 50px;
+            width: 70px;
+            cursor: pointer;
+        }
+        .button1{
+            background-color: gray;
+            cursor: pointer;
+        }
+        button:hover{
+            border-radius:4px;
+            background-color: aqua;
+            cursor: pointer;
+            height: 70px;
+            width: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create New Drive</h1>
+    <pre>
+    <h2>Name                <input type="text" name="Name" maxlength="30" placeholder="Your Name"></h2></pre>
+    <pre><h2>Programme           <select name="pro" id="programme">
+          <option value="Select">Select</option>
+          <option>Bachelor</option>
+          <option>Phd</option>
+          <option>Master</option>
+          <option>Associate</option>
+          <option>Diploma</option>
+          </select></h2></pre>
+
+    <pre><h2>Stream              <select name="stream" id="streams">
+            <option value="Select1">Select</option>
+            <option>Computer Science and Engineering</option>
+            <option>Mechanical</option>
+            <option>Production</option>
+            <option>Thermal</option>
+            <option>Electronics</option>
+          </select></h2></pre>
+    <pre><h2>Batch               <input type="text" name="Batch" maxlength="4" placeholder="Batch Year"></h2></pre>
+    <pre><h2>Criteria           <input type="checkbox" name="Skill" id="1">Percentage          <input type="text" name="Name" maxlength="30" placeholder="Overall Percentage"> <input type="text" name="Name" maxlength="30" placeholder="Courses  %">
+                   <input type="checkbox" name="Skill" id="1">Backlogs            <input type="text" name="Name" maxlength="30" placeholder="Total Backlogs"></h2></pre>
+    <pre><h2>Package            <input type="radio" name="1" id="1">Fix                <select name="stream" id="streams"><option value="Select1">Select</option>
+        <option>4 Lacs</option>
+        <option>5 Lacs</option>
+        <option>6 Lacs</option>
+        <option>7 Lacs</option>
+        <option>8 Lacs</option>
+        <option>9 Lacs</option>
+      </select> </h2></pre>
+    <pre><h2>Date of Drive       <input type="date" id="birthday" name="birthday"></h2></pre>
+    <pre><h2>Last Date of Application       <input type="date" id="birthday" name="birthday"></h2></pre>
+    <pre><h2>Designations           <select name="pro" id="programme">
+        <option value="Select">Select</option>
+        <option>Executive Engineer</option>
+        <option>Junior Developer</option>
+        <option>Devops Engineer</option>
+        <option>Information Technology Assistant</option>
+        <option>Software Developer</option>
+        </select></h2></pre>
+        <pre><h2>Description        <textarea name="descrption" id="des" cols="18" rows="2"></textarea></h2></pre>
+        <pre>                                                                                              <a href="drivesuccess.html"><button>Create</button></a>          <a href="placementofficer.html"><button class="button1">Cancel</button></a></pre>
+
+</body>
+</html>
